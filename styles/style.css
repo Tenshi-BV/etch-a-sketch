@@ -1,0 +1,14 @@
+#container {
+    height: 960px;
+    width: 960px;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(var(--resos), 1fr);
+    grid-template-rows: repeat(var(--resos), 1fr);
+    background-color:black;
+    border: 5px solid black;
+}
+
+.gridDiv {
+    background-color: white;
+}

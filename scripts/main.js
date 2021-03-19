@@ -19,4 +19,15 @@ gridDivs.forEach((div) => {
 })
 
 const reset = document.querySelector('#reset');
-ResizeObserver.addEventListener('click', makeRows(16));
+reset.addEventListener('click', () => {
+        let resos = prompt('Pick new resolution (between 1 and 100):')
+        if (!isNaN(resos) && resos > 0 && resos < 101) {
+                const toRemove = document.querySelectorAll('#container>.gridDiv');
+        toRemove.forEach((gridDiv) => {
+                container.removeChild(gridDiv);
+        })
+        makeRows(resos);
+        } else {
+                return;
+        }
+})
